@@ -8,11 +8,3 @@ config :admissions, AdmissionsWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :admissions, Admissions.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "admissions_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox

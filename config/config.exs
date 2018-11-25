@@ -7,15 +7,11 @@
 # General application configuration
 use Mix.Config
 
-config :admissions,
-  ecto_repos: [Admissions.Repo]
-
 # Configures the endpoint
 config :admissions, AdmissionsWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "XLUd15LR1LOCto//1ixlvSpfs5EXvd90joEE6OH3Xvsv36qz/344zQR2VlPl3WmF",
-  render_errors: [view: AdmissionsWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Admissions.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: AdmissionsWeb.ErrorView, accepts: ~w(html json)]
 
 # Configures Elixir's Logger
 config :logger, :console,
