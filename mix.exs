@@ -34,10 +34,13 @@ defmodule Admissions.MixProject do
   defp deps do
     [
       {:gettext, "~> 0.11"},
+      {:httpoison, "~> 1.4"},
       {:jason, "~> 1.0"},
       {:phoenix, "~> 1.4.0"},
       {:phoenix_html, "~> 2.11"},
       {:plug_cowboy, "~> 2.0"},
+      {:tentacat, "~> 1.2"},
+      {:ueberauth_github, "~> 0.7.0"},
 
       {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
