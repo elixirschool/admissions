@@ -23,12 +23,17 @@ config :phoenix, :json_library, Jason
 
 config :ueberauth, Ueberauth,
   providers: [
-    github: {Ueberauth.Strategy.Github, [default_scope: "user:email,user:profile"]}
+    github: {Ueberauth.Strategy.Github, [default_scope: "user:email,user:profile", send_redirect_uri: false]}
   ]
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_id: System.get_env("GITHUB_CLIENT_ID"),
   client_secret: System.get_env("GITHUB_CLIENT_SECRET")
+
+config :oauth2,
+	serializers: %{
+		"application/json" => Jason
+	}
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

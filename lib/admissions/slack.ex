@@ -5,10 +5,7 @@ defmodule Admissions.Slack do
 
   @invite_url "https://elixirschool.slack.com/api/users.admin.invite"
 
-  @doc """
-  """
-
-  @spec invite(String.t()) :: :ok | {:error, reason}
+  @spec invite(String.t()) :: :ok | {:error, String.t()}
   def invite(email) do
     email
     |> slack_invite()
@@ -16,13 +13,8 @@ defmodule Admissions.Slack do
   end
 
   defp slack_invite(email) do
-    body = %{
-      email: email,
-      set_active: true,
-      token: slack_token()
-    }
-
-    HTTPoison.post(@invite_url, Jason.encode!(body), [{"content-type", "application/json"}])
+    data = [email: email, set_active: true, token: slack_token()]
+    HTTPoison.post(@invite_url, {:form, data})
   end
 
   defp slack_response({:ok, %{body: body}}) do

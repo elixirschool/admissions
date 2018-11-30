@@ -1,9 +1,12 @@
 const path = require('path');
 const glob = require('glob');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = (env, options) => ({
   optimization: {
@@ -13,7 +16,7 @@ module.exports = (env, options) => ({
     ]
   },
   entry: {
-      './js/app.js': ['./js/app.js'].concat(glob.sync('./vendor/**/*.js'))
+    './js/app.js': ['./js/app.js'].concat(glob.sync('./vendor/**/*.js'))
   },
   output: {
     filename: 'app.js',
@@ -29,9 +32,23 @@ module.exports = (env, options) => ({
         }
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      }
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
+         test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+         use: [{
+           loader: 'file-loader',
+           options: {
+             name: '[name].[ext]',
+             outputPath: '../fonts/'
+           }
+         }]
+       }
     ]
   },
   plugins: [

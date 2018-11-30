@@ -4,23 +4,22 @@ defmodule AdmissionsWeb.RegistrarController do
   """
   use AdmissionsWeb, :controller
 
+  require Logger
+
+  alias Admissions.Registrar
+
   @spec index(Plug.Conn.t(), map()) :: Plug.Conn.t()
   def index(conn, _params) do
     render(conn, "index.html")
   end
 
-  @spec eligible(Plug.Conn.t(), map()) :: Plug.Conn.t()
-  def eligible(%{assigns: %{email: email, nickname: nickname}} = conn, _params) do
-    render(conn, "eligible.html", email: email, nickname: nickname)
-  end
+  @spec eligibility(Plug.Conn.t(), map()) :: Plug.Conn.t()
+  def eligibility(conn, _params) do
+    %{email: email, nickname: nickname, token: token} = get_session(conn, :github)
 
-  def eligible(conn, _params) do
-    redirect(conn, to: "/")
-  end
+    template = if Registrar.eligible?(nickname, token), do: "eligible.html", else: "ineligible.html"
 
-  @spec ineligible(Plug.Conn.t(), map()) :: Plug.Conn.t()
-  def ineligible(%{assigns: %{nickname: nickname}}, _params) do
-    render(conn, "ineligible.html", nickname: nickname)
+    render(conn, template, %{email: email, nickname: nickname})
   end
 
   @spec register(Plug.Conn.t(), map()) :: Plug.Conn.t()
@@ -29,7 +28,8 @@ defmodule AdmissionsWeb.RegistrarController do
       :ok ->
         render(conn, "welcome.html")
       {:error, reason} ->
-        render(conn, "error.html", reason: reason)
+        Logger.error(inspect(reason))
+        render(conn, "error.html")
     end
   end
 end

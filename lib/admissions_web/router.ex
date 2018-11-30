@@ -10,6 +10,10 @@ defmodule AdmissionsWeb.Router do
     plug Ueberauth
   end
 
+  pipeline :auth do
+    plug AdmissionsWeb.AuthPlug
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -18,9 +22,14 @@ defmodule AdmissionsWeb.Router do
     pipe_through :browser
 
     get "/", RegistrarController, :index
-    get "/eligibile", RegistrarController, :eligibile
-    get "/ineligibile", RegistrarController, :ineligibile
+  end
+
+  scope "/", AdmissionsWeb do
+    pipe_through [:browser, :auth]
+
+    get "/eligibility", RegistrarController, :eligibility
     get "/thankyou", RegistrarController, :thankyou
+    post "/register", RegistrarController, :register
   end
 
   scope "/auth", AdmissionsWeb do

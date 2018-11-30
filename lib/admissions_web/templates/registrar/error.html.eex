@@ -1,0 +1,10 @@
+<div class="container has-text-centered">
+  <div class="column is-6 is-offset-3">
+    <h1 class="title">
+      Oh no!
+    </h1>
+    <h2 class="subtitle">
+      An unexpected error occurred sending your invitation.
+    </h2>
+  </div>
+</div>
