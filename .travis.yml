@@ -1,0 +1,21 @@
+language: elixir
+
+sudo: false
+
+notifications:
+  email: false
+
+elixir:
+  - 1.6
+  - 1.7
+
+otp_release:
+  - 20.3
+  - 21.1
+
+script:
+  - mix local.hex --force
+  - mix local.rebar --force
+  - mix deps.get
+  - mix credo --strict
+  - mix test
