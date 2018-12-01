@@ -11,11 +11,10 @@ use Mix.Config
 # before starting your production server.
 config :admissions, AdmissionsWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
-  url: [host: "admissions.elixirschool.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  url: [scheme: "https", host: "admissions.elixirschool.com"],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Do not print debug messages in production
 config :logger, level: :info
 
-config :admissions, AdmissionsWeb.Endpoint,
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
