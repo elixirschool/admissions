@@ -9,7 +9,9 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@fortawesome/fontawesome-free": "^5.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-brands-svg-icons": "^5.5.0",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "babel-loader": "^8.0.0",
     "bulma": "^0.7.2",
     "copy-webpack-plugin": "^4.5.0",
