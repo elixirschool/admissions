@@ -11,7 +11,12 @@ use Mix.Config
 config :admissions, AdmissionsWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "XLUd15LR1LOCto//1ixlvSpfs5EXvd90joEE6OH3Xvsv36qz/344zQR2VlPl3WmF",
-  render_errors: [view: AdmissionsWeb.ErrorView, accepts: ~w(html json)]
+  render_errors: [view: AdmissionsWeb.ErrorView, accepts: ~w(html json)],
+	instrumenters: [Appsignal.Phoenix.Instrumenter]
+
+config :phoenix, :template_engines,
+	eex: Appsignal.Phoenix.Template.EExEngine,
+	exs: Appsignal.Phoenix.Template.ExsEngine
 
 # Configures Elixir's Logger
 config :logger, :console,

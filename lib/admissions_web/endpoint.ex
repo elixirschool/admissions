@@ -1,5 +1,6 @@
 defmodule AdmissionsWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :admissions
+  use Appsignal.Phoenix
 
   # Serve at "/" the static files from "priv/static" directory.
   #
