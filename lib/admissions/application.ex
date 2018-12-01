@@ -5,6 +5,7 @@ defmodule Admissions.Application do
 
   use Application
 
+  @impl true
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
@@ -20,8 +21,7 @@ defmodule Admissions.Application do
     Supervisor.start_link(children, opts)
   end
 
-  # Tell Phoenix to update the endpoint configuration
-  # whenever the application is updated.
+  @spec config_change(term(), term(), term()) :: term()
   def config_change(changed, _new, removed) do
     AdmissionsWeb.Endpoint.config_change(changed, removed)
     :ok

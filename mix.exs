@@ -40,6 +40,7 @@ defmodule Admissions.MixProject do
       {:tentacat, "~> 1.2"},
       {:ueberauth_github, "~> 0.7.0"},
 
+      {:credo, "~> 1.0", only: :dev},
       {:phoenix_live_reload, "~> 1.2", only: :dev}
     ]
   end

@@ -4,7 +4,8 @@ defmodule Admissions.Registrar do
   """
 
   alias Admissions.Slack
-  alias Tentacat.{Client, Repositories.Contributors}
+  alias Tentacat.Client
+  alias Tentacat.Repositories.Contributors
 
   defdelegate invite(email), to: Slack
 
@@ -16,8 +17,8 @@ defmodule Admissions.Registrar do
   def eligible?(nickname, token), do: nickname in contributors(token)
 
   defp contributors(token) do
-		%{access_token: token}
-		|> Client.new()
+    %{access_token: token}
+    |> Client.new()
     |> Contributors.list("elixirschool", "elixirschool")
     |> Enum.map(&Map.get(&1, "login"))
   end

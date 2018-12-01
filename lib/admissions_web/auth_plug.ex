@@ -1,14 +1,19 @@
 defmodule AdmissionsWeb.AuthPlug do
   @moduledoc """
+  A simple plug to ensure we have a session populated with our expected information.
   """
+
+  @behaviour Plug
 
   import Phoenix.Controller, only: [put_flash: 3, redirect: 2]
   import Plug.Conn, only: [get_session: 2]
 
   alias AdmissionsWeb.Router.Helpers
 
+  @impl true
   def init(opts), do: opts
 
+  @impl true
   def call(conn, _opts) do
     if authenticated?(conn) do
       conn
