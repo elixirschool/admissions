@@ -1,0 +1,60 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2\n"
+
+#: lib/admissions_web/templates/registrar/welcome.html.eex:7
+msgid "welcome_subtitle"
+msgstr "No problem, just update it below before submitting."
+
+#: lib/admissions_web/templates/registrar/welcome.html.eex:4
+msgid "welcome_title"
+msgstr "Welcome!"
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/eligible.html.eex:7
+msgid "eligible_subtitle"
+msgstr "Thank you for your contributions, this wouldn’t be the same without you!\nPlease confirm the email address for your invitation."
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/index.html.eex:7
+msgid "index_subtitle"
+msgstr "To check eligibility, please sign-in with GitHub below."
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/index.html.eex:4
+msgid "index_title"
+msgstr "Welcome to Elixir School Slack!"
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:10
+msgid "ineligible_content"
+msgstr "At this time Slack invitations are reserved for contributors.\nIf you feel this is a mistake, let us know on Twitter @elixirschool.\n"
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:4
+msgid "ineligible_title"
+msgstr "Ineligible for admission"
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:7
+msgid "ineligible_subtitle %{nickname}"
+msgstr "We're sorry %{nickname} but it does not appear you are eligible at this time."
+
+#, elixir-format, fuzzy
+#: lib/admissions_web/templates/registrar/eligible.html.eex:10
+msgid "eligible_note"
+msgstr "Want to use another email address?\nNo problem, just update it below before submitting."
+
+#, elixir-format, fuzzy
+#: lib/admissions_web/templates/registrar/eligible.html.eex:4
+msgid "eligible_title"
+msgstr "Thank you for your contributions, this wouldn’t be the same without you!\nPlease confirm the email address for your invitation."
