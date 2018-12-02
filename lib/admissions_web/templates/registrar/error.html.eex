@@ -1,10 +1,10 @@
 <div class="container has-text-centered">
   <div class="column is-6 is-offset-3">
     <h1 class="title">
-      Oh no!
+      <%= dgettext("errors", "registration_error") %>
     </h1>
     <h2 class="subtitle">
-      An unexpected error occurred sending your invitation.
+      <%= @message %>
     </h2>
   </div>
 </div>

@@ -18,5 +18,8 @@ msgstr "An account exists already for this email"
 msgid "invalid_email"
 msgstr "The email address provided appears invalid"
 
+msgid "registration_error"
+msgstr "An error occurred during registration"
+
 msgid "unexpected_error"
 msgstr "Something unexpected happened, please try again later"

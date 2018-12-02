@@ -7,6 +7,7 @@ defmodule AdmissionsWeb.RegistrarController do
   require Logger
 
   alias Admissions.Registrar
+  alias AdmissionsWeb.Gettext
 
   @spec index(Plug.Conn.t(), map()) :: Plug.Conn.t()
   def index(conn, _params) do
@@ -28,8 +29,14 @@ defmodule AdmissionsWeb.RegistrarController do
       :ok ->
         render(conn, "welcome.html")
       {:error, reason} ->
-        Logger.error(inspect(reason))
-        render(conn, "error.html")
+        Appsignal.Transaction.set_error("Registration Error", reason, [])
+        message = translated_message(reason)
+        render(conn, "error.html", message: message)
     end
   end
+
+  defp translated_message("already_in_team"), do: Gettext.dgettext("errors", "already_in_team")
+  defp translated_message("already_invited"), do: Gettext.dgettext("errors", "already_invited")
+  defp translated_message("invalid_email"), do: Gettext.dgettext("errors", "invalid_email")
+  defp translated_message("unexpected_error"), do: Gettext.dgettext("errors", "unexpected_error")
 end
