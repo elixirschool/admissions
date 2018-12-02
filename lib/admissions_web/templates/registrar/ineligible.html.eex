@@ -1,17 +1,13 @@
 <div class="container has-text-centered">
   <div class="column is-6 is-offset-3">
     <h1 class="title">
-      Ineligible for admission
+      <%= gettext("ineligible_title")  %>
     </h1>
     <h2 class="subtitle">
-      We're sorry <%= @nickname %>, but it does not appear you are eligible at this time.
+      <%= gettext("ineligible_subtitle %{nickname}", nickname: @nickname) %>
     </h2>
     <span class="content">
-      At this time Slack invitations are reserved for contributors.
-			Looking for a contribution opportunity?
-      Head over to <a href="https://github.com/elixirschool/elixirschool/issues">GitHub Issues</a> to see where we need help. 
-
-			If you feel this is a mistake, let us know on Twitter @elixirschool.<Paste>
+      <%= gettext("ineligible_content") %>
     </span>
   </div>
 </div>

@@ -1,28 +1,26 @@
 <div class="container has-text-centered">
-	<div class="column is-6 is-offset-3">
-		<h1 class="title">
-			You're eligible <%= @nickname %>!
-		</h1>
-		<h2 class="subtitle">
-			Thank you for your contributions, this wouldn’t be the same without you!
-			Please confirm the email address for your invitation.
-		</h2>
-		<p class="content is-small">
-		Want to use another email address? 
-		No problem, just update it below before submitting.
-		</p>
+  <div class="column is-6 is-offset-3">
+    <h1 class="title">
+      <%= gettext("eligible_title", nickname: @nickname) %>
+    </h1>
+    <h2 class="subtitle">
+      <%= gettext("eligible_subtitle") %>
+    </h2>
+    <p class="content is-small">
+      <%= gettext("eligible_note") %>
+    </p>
     <%= form_for @conn, Routes.registrar_path(@conn, :register), fn f -> %>
-			<div class="field has-addons has-addons-centered">
-				<div class="control has-icons-left has-icons-right">
+      <div class="field has-addons has-addons-centered">
+        <div class="control has-icons-left has-icons-right">
           <%= email_input(f, "email", class: "input", value: @email) %>
-					<span class="icon is-small is-left">
-						<i class="fas fa-envelope"></i>
-					</span>
-				</div>
-				<div class="control">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
+        <div class="control">
           <%= submit("Register", class: "button is-info") %>
-				</div>
-			</div>
-      <% end %>
-	</div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

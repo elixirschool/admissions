@@ -1,11 +1,10 @@
 <div class="container has-text-centered">
   <div class="column is-6 is-offset-3">
     <h1 class="title">
-      Welcome!
+      <%= gettext("welcome_title") %>
     </h1>
     <h2 class="subtitle">
-      Your invitation should be arriving in your inbox shortly.
-      We look forward to seeing you shortly!
+      <%= gettext("welcome_subtitle") %>
     </h2>
   </div>
 </div>

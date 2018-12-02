@@ -20,17 +20,22 @@ msgstr ""
 ## date. Leave `msgstr`s empty as changing them here has no
 ## effect: edit them in PO (`.po`) files instead.
 ## From Registrar.invite/1
+#: lib/admissions_web/controllers/registrar_controller.ex:39
 msgid "already_invited"
 msgstr "Your invite was already sent, please check your email"
 
+#: lib/admissions_web/controllers/registrar_controller.ex:38
 msgid "already_in_team"
 msgstr "An account exists already for this email"
 
+#: lib/admissions_web/controllers/registrar_controller.ex:40
 msgid "invalid_email"
 msgstr "The email address provided appears invalid"
 
+#: lib/admissions_web/templates/registrar/error.html.eex:4
 msgid "registration_error"
 msgstr "An error occurred during registration"
 
+#: lib/admissions_web/controllers/registrar_controller.ex:41
 msgid "unexpected_error"
 msgstr "Something unexpected happened, please try again later"

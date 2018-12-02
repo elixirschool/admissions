@@ -1,0 +1,59 @@
+## This file is a PO Template file.
+##
+## `msgid`s here are often extracted from source code.
+## Add new translations manually only if they're dynamic
+## translations that can't be statically extracted.
+##
+## Run `mix gettext.extract` to bring this file up to
+## date. Leave `msgstr`s empty as changing them here as no
+## effect: edit them in PO (`.po`) files instead.
+msgid ""
+msgstr ""
+
+#: lib/admissions_web/templates/registrar/welcome.html.eex:7
+msgid "welcome_subtitle"
+msgstr ""
+
+#: lib/admissions_web/templates/registrar/welcome.html.eex:4
+msgid "welcome_title"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/eligible.html.eex:7
+msgid "eligible_subtitle"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/index.html.eex:7
+msgid "index_subtitle"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/index.html.eex:4
+msgid "index_title"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:10
+msgid "ineligible_content"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:4
+msgid "ineligible_title"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:7
+msgid "ineligible_subtitle %{nickname}"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/eligible.html.eex:10
+msgid "eligible_note"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/eligible.html.eex:4
+msgid "eligible_title"
+msgstr ""
