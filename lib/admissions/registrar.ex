@@ -14,12 +14,20 @@ defmodule Admissions.Registrar do
   """
 
   @spec eligible?(String.t(), String.t()) :: boolean()
-  def eligible?(nickname, token), do: nickname in contributors(token)
-
-  defp contributors(token) do
-    %{access_token: token}
-    |> Client.new()
-    |> Contributors.list("elixirschool", "elixirschool")
-    |> Enum.map(&Map.get(&1, "login"))
+  def eligible?(nickname, token) do
+    client = Client.new(%{access_token: token})
+    Enum.any?(organizations(), &org_contributor?(client, nickname, &1))
   end
+
+  defp contributor?(client, nickname, org, repo) do
+    client
+    |> Contributors.list(org, repo)
+    |> Enum.any?(&(Map.get(&1, "login") == nickname))
+  end
+
+  defp org_contributor?(client, nickname, {org, repos}) do
+    Enum.any?(repos, &contributor?(client, nickname, org, &1))
+  end
+
+  def organizations, do: Application.get_env(:admissions, :repositories)
 end
