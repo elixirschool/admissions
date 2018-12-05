@@ -9,13 +9,14 @@
   </head>
   <body>
     <section class="hero is-fullheight">
-      <div class="hero-head">
-      </div>
-
       <div class="hero-body">
-        <%= render @view_module, @view_template, assigns %>
-        <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+        <div class="container has-text-centered">
+          <div class="column is-8 is-offset-2 box">
+            <%= render @view_module, @view_template, assigns %>
+          </div>
+        </div>
       </div>
     </section>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

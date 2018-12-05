@@ -1,10 +1,6 @@
-<div class="container has-text-centered">
-  <div class="column is-6 is-offset-3">
-    <h1 class="title">
-      <%= dgettext("errors", "registration_error") %>
-    </h1>
-    <h2 class="subtitle">
-      <%= @message %>
-    </h2>
-  </div>
-</div>
+<h1 class="title">
+  <%= dgettext("errors", "registration_error") %>
+</h1>
+<h2 class="subtitle">
+  <%= @message %>
+</h2>

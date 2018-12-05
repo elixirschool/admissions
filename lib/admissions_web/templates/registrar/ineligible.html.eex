@@ -1,13 +1,9 @@
-<div class="container has-text-centered">
-  <div class="column is-6 is-offset-3">
-    <h1 class="title">
-      <%= gettext("ineligible_title")  %>
-    </h1>
-    <h2 class="subtitle">
-      <%= gettext("ineligible_subtitle %{nickname}", nickname: @nickname) %>
-    </h2>
-    <span class="content">
-      <%= gettext("ineligible_content") %>
-    </span>
-  </div>
-</div>
+<h1 class="title">
+  <%= gettext("ineligible_title")  %>
+</h1>
+<h2 class="subtitle">
+  <%= gettext("ineligible_subtitle %{nickname}", nickname: @nickname) %>
+</h2>
+<span class="content">
+  <%= gettext("ineligible_content") %>
+</span>

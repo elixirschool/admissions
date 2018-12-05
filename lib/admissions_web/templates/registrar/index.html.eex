@@ -1,16 +1,12 @@
-<div class="container has-text-centered">
-  <div class="column is-6 is-offset-3">
-    <h1 class="title">
-      <%= gettext("index_title") %>
-    </h1>
-    <h2 class="subtitle">
-      <%= gettext("index_subtitle") %>
-    </h2>
-    <a class="button is-info" href="/auth/github">
-      <span class="icon">
-        <i class="fab fa-github"></i>
-      </span>
-      <span>Sign-in with GitHub</span>
-    </a>
-  </div>
-</div>
+<h1 class="title">
+  <%= gettext("index_title") %>
+</h1>
+<p class="subtitle">
+  <%= gettext("index_subtitle") %>
+</p>
+<a class="button is-info is-medium" href="/auth/github">
+  <span class="icon">
+    <i class="fab fa-github"></i>
+  </span>
+  <span>Sign-in with GitHub</span>
+</a>
