@@ -10,50 +10,50 @@
 msgid ""
 msgstr ""
 
-#: lib/admissions_web/templates/registrar/welcome.html.eex:7
+#: lib/admissions_web/templates/registrar/welcome.html.eex:5
 msgid "welcome_subtitle"
 msgstr ""
 
-#: lib/admissions_web/templates/registrar/welcome.html.eex:4
+#: lib/admissions_web/templates/registrar/welcome.html.eex:2
 msgid "welcome_title"
 msgstr ""
 
 #, elixir-format
-#: lib/admissions_web/templates/registrar/eligible.html.eex:7
+#: lib/admissions_web/templates/registrar/eligible.html.eex:5
 msgid "eligible_subtitle"
 msgstr ""
 
 #, elixir-format
-#: lib/admissions_web/templates/registrar/index.html.eex:7
+#: lib/admissions_web/templates/registrar/index.html.eex:5
 msgid "index_subtitle"
 msgstr ""
 
 #, elixir-format
-#: lib/admissions_web/templates/registrar/index.html.eex:4
+#: lib/admissions_web/templates/registrar/index.html.eex:2
 msgid "index_title"
 msgstr ""
 
 #, elixir-format
-#: lib/admissions_web/templates/registrar/ineligible.html.eex:10
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:8
 msgid "ineligible_content"
 msgstr ""
 
 #, elixir-format
-#: lib/admissions_web/templates/registrar/ineligible.html.eex:4
-msgid "ineligible_title"
-msgstr ""
-
-#, elixir-format
-#: lib/admissions_web/templates/registrar/ineligible.html.eex:7
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:5
 msgid "ineligible_subtitle %{nickname}"
 msgstr ""
 
 #, elixir-format
-#: lib/admissions_web/templates/registrar/eligible.html.eex:10
+#: lib/admissions_web/templates/registrar/eligible.html.eex:8
 msgid "eligible_note"
 msgstr ""
 
 #, elixir-format
-#: lib/admissions_web/templates/registrar/eligible.html.eex:4
+#: lib/admissions_web/templates/registrar/eligible.html.eex:2
 msgid "eligible_title"
+msgstr ""
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:2
+msgid "eligible_title %{nickname}"
 msgstr ""

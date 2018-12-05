@@ -32,7 +32,7 @@ msgstr "An account exists already for this email"
 msgid "invalid_email"
 msgstr "The email address provided appears invalid"
 
-#: lib/admissions_web/templates/registrar/error.html.eex:4
+#: lib/admissions_web/templates/registrar/error.html.eex:2
 msgid "registration_error"
 msgstr "An error occurred during registration"
 
