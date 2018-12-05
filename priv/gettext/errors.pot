@@ -20,7 +20,7 @@ msgstr ""
 msgid "invalid_email"
 msgstr ""
 
-#: lib/admissions_web/templates/registrar/error.html.eex:4
+#: lib/admissions_web/templates/registrar/error.html.eex:2
 msgid "registration_error"
 msgstr ""
 

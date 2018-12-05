@@ -1,5 +1,5 @@
 <h1 class="title">
-  <%= gettext("eligible_title", nickname: @nickname) %>
+  <%= gettext("eligible_title %{nickname}", nickname: @nickname) %>
 </h1>
 <h2 class="subtitle">
   <%= gettext("eligible_subtitle") %>
