@@ -20,9 +20,12 @@ defmodule Admissions.Registrar do
   end
 
   defp contributor?(client, nickname, org, repo) do
-    client
-    |> Contributors.list(org, repo)
-    |> Enum.any?(&(Map.get(&1, "login") == nickname))
+    with {_status_code, contributors, _http_response} <- Contributors.list(client, org, repo)
+    do
+      Enum.any?(contributors, &(Map.get(&1, "login") == nickname))
+    else
+      _ -> false
+    end
   end
 
   defp org_contributor?(client, nickname, {org, repos}) do
