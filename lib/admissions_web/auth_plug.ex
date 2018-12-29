@@ -25,8 +25,11 @@ defmodule AdmissionsWeb.AuthPlug do
   end
 
   defp authenticated?(conn) do
-    conn
-    |> get_session(:github)
-    |> Map.has_key?(:token)
+    with github when is_map(github) <- get_session(conn, :github)
+    do
+      Map.has_key?(github, :token)
+    else
+      _ -> false
+    end
   end
 end
