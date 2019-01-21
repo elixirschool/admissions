@@ -58,3 +58,8 @@ msgstr "Thank you for your contributions, this wouldn’t be the same without yo
 #: lib/admissions_web/templates/registrar/ineligible.html.eex:2
 msgid "eligible_title %{nickname}"
 msgstr "🎉 You're eligible, %{nickname}!"
+
+#, elixir-format
+#: lib/admissions_web/templates/registrar/ineligible.html.eex:2
+msgid "ineligible_title"
+msgstr "Currently ineligible"
