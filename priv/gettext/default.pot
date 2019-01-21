@@ -50,10 +50,10 @@ msgstr ""
 
 #, elixir-format
 #: lib/admissions_web/templates/registrar/eligible.html.eex:2
-msgid "eligible_title"
+msgid "eligible_title %{nickname}"
 msgstr ""
 
 #, elixir-format
 #: lib/admissions_web/templates/registrar/ineligible.html.eex:2
-msgid "eligible_title %{nickname}"
+msgid "ineligible_title"
 msgstr ""
