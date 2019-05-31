@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://elixirschool.com/assets/favicons/apple-touch-icon-06ad80501b5734bba0428ca0fc14fcbe45811a144914f7be78cdab3c3ea25458.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://elixirschool.com/assets/favicons/favicon-32x32-6e7b9eca57d29d185a5184e844c1372ce9da0a71f373f89b80ff11f120b01678.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://elixirschool.com/assets/favicons/favicon-16x16-789b56195138252cac40cf7f2425b6fcb4e71c3084abc8525781188781b958d3.png">
+    <link rel="manifest" href="https://elixirschool.com/assets/favicons/manifest-2043e2089b7bc9cd24d532ed1957b0e83ad7d4a70762a39b5fcd681368135477.json">
+    <link rel="shortcut icon" href="https://elixirschool.com/assets/favicons/favicon-8e1fdc2a44d6344b9871b3ecf53a803903891f82a602a3f59c65eda40f2b77b0.ico">
+    <meta name="msapplication-config" content="https://elixirschool.com/assets/favicons/browserconfig-e66282a6754e6899f9a53c6ebfe120749630242b741deb65f364abc297ccbc96.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <title>Elixir School - Slack admissions</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
