@@ -13,7 +13,7 @@ msgstr ""
 
 #: lib/admissions_web/templates/registrar/welcome.html.eex:5
 msgid "welcome_subtitle"
-msgstr "No problem, just update it below before submitting."
+msgstr "Please check your email for Slack the invitation link."
 
 #: lib/admissions_web/templates/registrar/welcome.html.eex:2
 msgid "welcome_title"
