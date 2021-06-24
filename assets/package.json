@@ -5,7 +5,6 @@
     "deploy": "webpack --mode production",
     "watch": "webpack --mode development --watch"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
