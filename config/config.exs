@@ -41,7 +41,7 @@ config :oauth2,
 	}
 
 config :admissions, repositories: %{
-  "elixirschool" => ["elixirschool", "admissions", "extracurricular", "homework"]
+  "elixirschool" => ["elixirschool", "admissions", "extracurricular", "homework", "school_house"]
 }
 
 # Import environment specific config. This must remain at the bottom
